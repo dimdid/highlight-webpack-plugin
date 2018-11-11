@@ -1,0 +1,1 @@
+export HighlightPlugin from './src/highlight-webpack-plugin';

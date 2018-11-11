@@ -1,0 +1,20 @@
+# Project
+dist
+
+# Dependencies
+node_modules/
+dependencies/
+
+
+# Running specifique
+*~
+.swp
+logs
+*.log
+.env
+tmp
+
+# IntelliJ
+.idea
+*.iws
+*.iml
