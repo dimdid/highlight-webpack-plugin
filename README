@@ -1,0 +1,11 @@
+# highlight-webpack-plugin
+
+Use highlight.js with webpack.
+
+~~~js
+const Hwp = require('highlight-webpack-plugin')
+
+webpackConfig.plugins.push(new Hwp);
+~~~
+
+
