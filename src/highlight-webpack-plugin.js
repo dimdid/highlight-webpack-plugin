@@ -6,7 +6,8 @@ module.exports = HighlightPlugin;
  *
  * @param opts
  * @param opts.languages
- * @constructor
+ *
+ * @require html-webpack-plugin
  * @fixme don't reconize scss #{varAsString}
  * @todo some..
  */

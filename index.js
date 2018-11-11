@@ -1,1 +1,1 @@
-export * from './src/highlight-webpack-plugin';
+module.exports = require('./src/highlight-webpack-plugin');

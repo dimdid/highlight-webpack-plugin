@@ -1,6 +1,6 @@
 # highlight-webpack-plugin
 
-Use highlight.js with webpack.
+Use highlight.js with webpack and html-webpack-plugin.
 
 ~~~js
 const Hwp = require('highlight-webpack-plugin')
