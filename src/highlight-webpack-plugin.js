@@ -1,5 +1,7 @@
-const hljs = require('highlight.js')
+const hljs = require('highlight.js/lib/highlight');
 ;
+module.exports = HighlightPlugin;
+
 /**
  *
  * @param opts
@@ -17,7 +19,6 @@ function HighlightPlugin( opts={} ) {
     'shell', 'nginx',
     'markdown',
   ]];
-  const hljs = require('highlight.js/lib/highlight');
   hljs.configure({
     tabReplace: '  ',
     classPrefix: 'hljs-',
@@ -76,7 +77,6 @@ function HighlightPlugin( opts={} ) {
         }
         let highlighted = data.html.slice(0, blocks[0].iStart);
         for (let i = 0; i < l; i++) {
-          console.error('BLOCKI', blocks[i].openTag);
           highlighted += blocks[i].content;
           highlighted += data.html.slice(blocks[i].iEnd, blocks[i+1]? blocks[i+1].iStart: -1);
         }

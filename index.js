@@ -1,1 +1,1 @@
-export HighlightPlugin from './src/highlight-webpack-plugin';
+export * from './src/highlight-webpack-plugin';
