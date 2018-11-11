@@ -1,3 +1,5 @@
+const hljs = require('highlight.js')
+;
 /**
  *
  * @param opts

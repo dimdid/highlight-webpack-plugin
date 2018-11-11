@@ -8,4 +8,4 @@ const Hwp = require('highlight-webpack-plugin')
 webpackConfig.plugins.push(new Hwp);
 ~~~
 
-
+for now can import styles from 'highlight.js/styles/'
