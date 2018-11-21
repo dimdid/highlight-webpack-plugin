@@ -34,6 +34,10 @@ function HighlightPlugin( opts={} ) {
 
   this.apply = compiler => {
     compiler.plugin('compilation', (compilation)=> {
+      let htmlPlug = compilation.options.plugins.find( 
+        plug => plug.constructor.name === 'HtmlWebpackPlugin'
+      );
+      if (!htmlPlug) { return; }
       compilation.plugin( 'html-webpack-plugin-before-html-processing', (data, cb)=> {
         const blocks = ( src => {
           //TODO: tag may have other attribute than just class, .. but code.. i don't ... ? /(.*)?/

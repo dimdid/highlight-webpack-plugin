@@ -3,9 +3,9 @@
 Use highlight.js with webpack and html-webpack-plugin.
 
 ~~~js
-const Hwp = require('highlight-webpack-plugin')
+const HighlightPlugin = require('highlight-webpack-plugin')
 
-webpackConfig.plugins.push(new Hwp);
+webpackConfig.plugins.push(new HighlightPlugin);
 ~~~
 
 for now can import styles from 'highlight.js/styles/'
