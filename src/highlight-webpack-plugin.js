@@ -83,7 +83,7 @@ function HighlightPlugin( opts={} ) {
         let highlighted = data.html.slice(0, blocks[0].iStart);
         for (let i = 0; i < l; i++) {
           highlighted += blocks[i].content;
-          highlighted += data.html.slice(blocks[i].iEnd, blocks[i+1]? blocks[i+1].iStart: -1);
+          highlighted += data.html.slice(blocks[i].iEnd, blocks[i+1]? blocks[i+1].iStart: undefined);
         }
         if (cb) {
           console.error('TODO: use cb !!');
