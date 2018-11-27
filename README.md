@@ -6,7 +6,9 @@
 Use [highlight.js][highlight.js] with [webpack][webpack] and html-webpack-plugin.
 
 ## Usage
-
+~~~sh
+npm i -D https://github.com/dimdid/highlight-webpack-plugin.git
+~~~
 ~~~js
 // webpack.config.js
 const HighlightPlugin = require('highlight-webpack-plugin')
