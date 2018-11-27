@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "highlight.js": "^9.13.1"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.5.5"
   }
 }

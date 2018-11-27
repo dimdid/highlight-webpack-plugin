@@ -1,4 +1,4 @@
 #TODO
 - [ ] expose styles 
 - [ ] inject styles into layout
-
+- [ ] html-webpack-plugin hook come too late for purge css, and not really usefull...
