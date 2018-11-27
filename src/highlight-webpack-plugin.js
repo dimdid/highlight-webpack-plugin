@@ -2,20 +2,40 @@ const hljs = require('highlight.js/lib/highlight');
 ;
 module.exports = HighlightPlugin;
 
+/*
+ * for next version of plugin, prefer use getHooks
+ */
+function nextHighLightPlugin( opts={} ) {
+  this.name = 'HighlightPlugin';
+  this.apply = compiler => {
+    compiler.hooks.compilation.tap(this.name, compilation => {
+      HtmlWebpackPlugin.getHooks(compilation).beforeAssetTagGeneration.tapAsync(this.name, (data, cb)=> {
+
+      });
+    });
+  };
+}
+
 /**
- * Insert code markup into html processed by html-webpack-plugin
+ * [hwp]:https://webpack.js.org/plugins/html-webpack-plugin/
+ * [hljs]:https://highlightjs.org/
+ * Insert code markup into html processed by [html-webpack-plugin][hwp]
  * @constructor
  * @param {object} opts
  * @param {array} opts.languages language to support
  *                (js,json,scss,css,shell,markdown enable by default)
+ * @param {string} opts.classPrefix class prefix for markup
  *
  * @modifies {html processed by html-webpack-plugin}
  *
  * @requires html-webpack-plugin
  * @requires highlight.js
  *
- * @fixme don't reconize scss #{varAsString}
+ * @todo don't reconize scss #{varAsString} -> higlight issue
  * @todo need to add markup before css processing ( to not remove code class from css )
+ *       used htmlPlugin hook come too late
+ * 
+ *
  */
 function HighlightPlugin( opts={} ) {
   //TODO: accept styles to load
@@ -28,7 +48,7 @@ function HighlightPlugin( opts={} ) {
   ]];
   hljs.configure({
     tabReplace: '  ',
-    classPrefix: 'hljs-',
+    classPrefix: opts.classPrefix || 'hljs-',
     //languages: languages  //no need since i don't import default...
   });
   let l = languages.length;

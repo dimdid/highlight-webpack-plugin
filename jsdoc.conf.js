@@ -2,29 +2,30 @@
 
 module.exports = {
   "plugins": [
+    'plugins/markdown',
     //"plugins/commentsOnly"
-    //"plugins/summarize.js"
+    "plugins/summarize.js"
   ],
   "opts": {
-    "destination": "./doc"
+    "destination": './doc',
+    "readme": 'README.md',
+    "package": 'package.json'
   },
-  "allowUnknowTags":true,
   "recurseDepth": 10,
   "source": {
     "include": ".",
-    "exlude": ["node_module"],
+    "exlude": ['jsdoc.conf.js'], //TODO don't work for directory ! like node_modules or 
     "includePattern": ".+\\.js(doc|x)?$",
-    "excludePattern": "(^|\\/|\\\\)_"
+    "excludePattern": "((^|\\/|\\\\)_)|(node_modules)|(/doc)"
   },
   "sourceType": "module",
   "tags": {
-    "allowUnknownTags": true,
+    "allowUnknownTags": ['modifies'],
     "dictionaries": ["jsdoc","closure"]
   },
   "templates": {
-    "cleverLinks": false,
-    "monospaceLinks": false
+    "cleverLinks": true,
+    "monospaceLinks": true
   }
 }
-
 
