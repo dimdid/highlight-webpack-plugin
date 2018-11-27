@@ -13,7 +13,7 @@ module.exports = {
   },
   "recurseDepth": 10,
   "source": {
-    "include": ".",
+    "include": "./",
     "exlude": ['jsdoc.conf.js'], //TODO don't work for directory ! like node_modules or 
     "includePattern": ".+\\.js(doc|x)?$",
     "excludePattern": "((^|\\/|\\\\)_)|(node_modules)|(/doc)"

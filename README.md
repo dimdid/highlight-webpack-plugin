@@ -1,10 +1,12 @@
 [highlight.js]:https://github.com/highlightjs/highlight.js
 [webpack]:https://webpack.js.org/
+[doc]:https://htmlpreview.github.io/?https://raw.githubusercontent.com/dimdid/highlight-webpack-plugin/needItNow/doc/highlight-webpack-plugin/0.3.0/HighlightPlugin.html
 
 # highlight-webpack-plugin
 
 Use [highlight.js][highlight.js] with [webpack][webpack] and html-webpack-plugin.
 
+> see [documentation][doc]
 ## Usage
 ~~~sh
 npm i -D https://github.com/dimdid/highlight-webpack-plugin.git
@@ -13,7 +15,7 @@ npm i -D https://github.com/dimdid/highlight-webpack-plugin.git
 // webpack.config.js
 const HighlightPlugin = require('highlight-webpack-plugin')
 
-webpackConfig.plugins.push(new HighlightPlugin);
+webpackConfig.plugins.push(new HighlightPlugin());
 ~~~
 
 > for now can import styles from 'highlight.js/styles/'
@@ -22,6 +24,7 @@ webpackConfig.plugins.push(new HighlightPlugin);
 // main.css
 @import "~highlight.js/styles/docco.css";
 ~~~
+
 
 ## Exemple
 

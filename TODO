@@ -1,4 +1,6 @@
 #TODO
-- [ ] expose styles 
+- [ ] expose styles ??
 - [ ] inject styles into layout
 - [ ] html-webpack-plugin hook come too late for purge css, and not really usefull...
+#FIXME
+- [ ] don't reconize shell script as well
